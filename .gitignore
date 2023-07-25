@@ -1,0 +1,8 @@
+bin/
+obj/
+mod-build/
+
+.vscode/
+
+priv/
+tmp/
