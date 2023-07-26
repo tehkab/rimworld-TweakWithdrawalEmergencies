@@ -21,5 +21,10 @@
             <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
         </li>
     </modDependencies>
+    <loadAfter>
+        <li>Ludeon.RimWorld</li>
+        <li>Ludeon.RimWorld.Biotech</li>
+        <li>brrainz.harmony</li>
+    </loadAfter>
     <description>Allows configuring how soon the Medical Emergency from genetic drug dependencies appears for colonists and prisoners.</description>
 </ModMetaData>
