@@ -64,6 +64,12 @@ namespace TweakWithdrawalEmergencies
                     continue;
                 }
 
+                //set threshold
+                if(p.IsPrisonerOfColony) //prisoner
+                {
+                    threshold = Settings.prisonerSeverityThreshold;
+                }
+
                 //test drug dependencies (could be multiple)
                 bool over_threshold = false;
                 foreach(Hediff h in drugDependencies)
