@@ -87,10 +87,11 @@ namespace TweakWithdrawalEmergencies
                     if(h.Severity > threshold)
                     {
                         over_threshold = true;
+                        break;
                     }
                 }
 
-                //ignore if no drug dependency hediff is over our set threshold
+                //ignore if any drug dependency hediff is over our set threshold
                 if(over_threshold)
                 {
                     continue;
