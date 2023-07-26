@@ -34,13 +34,38 @@ namespace TweakWithdrawalEmergencies
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
+            int hours,days;
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
             
-            listingStandard.Label(TranslatorFormattedStringExtensions.Translate("OptionKabbyTWEColonistThreshold", (float)(Settings.colonistSeverityThreshold * 5.0f)));
+            listingStandard.Label(TranslatorFormattedStringExtensions.Translate("OptionKabbyTWEDescription"));
+
+            if(Settings.colonistSeverityThreshold < Settings.MAX_THRESHOLD)
+            {
+                hours = (int)(Settings.colonistSeverityThreshold * 120.0f); 
+                days = hours / 24;
+                hours %= 24;            
+                
+                listingStandard.Label(TranslatorFormattedStringExtensions.Translate("OptionKabbyTWEColonistThreshold", days, hours));
+            }
+            else
+            {
+                listingStandard.Label(TranslatorFormattedStringExtensions.Translate("OptionKabbyTWEColonistThresholdNever"));
+            }
             Settings.colonistSeverityThreshold = listingStandard.Slider(Settings.colonistSeverityThreshold, Settings.MIN_THRESHOLD, Settings.MAX_THRESHOLD);
 
-            listingStandard.Label(TranslatorFormattedStringExtensions.Translate("OptionKabbyTWEPrisonerThreshold", (float)(Settings.prisonerSeverityThreshold * 5.0f)));
+            if(Settings.prisonerSeverityThreshold < Settings.MAX_THRESHOLD)
+            {
+                hours = (int)(Settings.prisonerSeverityThreshold * 120.0f); 
+                days = hours / 24;
+                hours %= 24;            
+                
+                listingStandard.Label(TranslatorFormattedStringExtensions.Translate("OptionKabbyTWEPrisonerThreshold", days, hours));
+            }
+            else
+            {
+                listingStandard.Label(TranslatorFormattedStringExtensions.Translate("OptionKabbyTWEPrisonerThresholdNever"));
+            }
             Settings.prisonerSeverityThreshold = listingStandard.Slider(Settings.prisonerSeverityThreshold, Settings.MIN_THRESHOLD, Settings.MAX_THRESHOLD);
 
             listingStandard.End();

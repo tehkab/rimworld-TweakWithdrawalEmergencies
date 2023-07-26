@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--ENGLISH-->
+<LanguageData>
+	<TweakWithdrawalEmergencies>Tweak Withdrawal Emergencies</TweakWithdrawalEmergencies>
+	<OptionKabbyTWEDescription>Show Medical Emergency alert when drug dependency time reaches:</OptionKabbyTWEDescription>
+	<OptionKabbyTWEColonistThreshold>Colonists: {0} days {1} hours</OptionKabbyTWEColonistThreshold>
+	<OptionKabbyTWEColonistThresholdNever>Colonists: Never</OptionKabbyTWEColonistThresholdNever>
+    <OptionKabbyTWEPrisonerThreshold>Prisoners: {0} days {1} hours</OptionKabbyTWEPrisonerThreshold>
+	<OptionKabbyTWEPrisonerThresholdNever>Prisoners: Never</OptionKabbyTWEPrisonerThresholdNever>
+</LanguageData>
