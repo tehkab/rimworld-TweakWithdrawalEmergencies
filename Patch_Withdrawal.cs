@@ -46,7 +46,7 @@ namespace TweakWithdrawalEmergencies
 
             List<Pawn> ret_SickPawns = null;
 
-            double threshold = 11.0; //TODO configurable!
+            float threshold = Settings.colonistSeverityThreshold;
 
             foreach(Pawn p in __result)
             {
