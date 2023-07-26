@@ -6,6 +6,16 @@ using RimWorld;
 
 namespace TweakWithdrawalEmergencies
 {
+    [StaticConstructorOnStartup]
+    static class LoadHarmony
+    {
+        static LoadHarmony()
+        {
+            Harmony harmony = new Harmony("Kabby.Tweaks.WithdrawalEmergencies");
+            harmony.PatchAll();
+        }
+    }
+
     [HarmonyPatch(typeof(Alert_LifeThreateningHediff), "get_SickPawns")]
     static class Patch_Withdrawal
     {
