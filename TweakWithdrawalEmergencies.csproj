@@ -32,11 +32,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\harmony\net472\0Harmony.dll</HintPath>
+      <!-- relative path to external lib dll in my working dir -->
+      <HintPath>..\lib\harmony\net472\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\rimworld-linux\RimworldLinux_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <!-- relative path to copy of game dlls in my working dir -->
+      <HintPath>..\lib\rimworld-linux\RimworldLinux_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -48,7 +50,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\rimworld-linux\RimworldLinux_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <!-- relative path to copy of game dlls in my working dir -->
+      <HintPath>..\lib\rimworld-linux\RimworldLinux_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
