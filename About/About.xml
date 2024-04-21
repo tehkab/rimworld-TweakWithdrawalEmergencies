@@ -5,7 +5,7 @@
     <!-- <url></url> -->
     <packageId>Kabby.Tweaks.WithdrawalEmergencies</packageId>
     <supportedVersions>
-        <li>1.4</li>
+        <li>1.5</li>
     </supportedVersions>
     <modDependencies>
     <!-- Relevant genes come from Biotech? -->
